@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <title>History page</title>
+</head>
+<body>
+<br>
+<table align="center" width="90%" cellspacing="0" border="1">
+    <tr><td><H3>Accountant v4 - Flask - history page</H3></td></tr>
+</table>
+
+<table align="center" width="90%" cellspacing="0" border="0">
+    <tr><td><a href="/"><u>Main</u></a>&nbsp/&nbsp <b>History</b></td></tr>
+</table>
+<br><br>
+<table align="center" border="1" width="90%" cellspacing="0">
+    <tr width="50%">
+        <td>
+        <font size="5" color="red" >Historia</font>
+        </td>
+    </tr>
+        <tr>
+
+        <td>
+            <Br>
+                <form method="post">
+                                     <input type="hidden" name="akcja" value="historia_zakresy">
+        <font size="3" ><b>Podaj zakres:</b></font>
+        &nbsp &nbsp
+                    <input type="text" name="start" placeholder="Początek zakresu" value="{{request.form.start}}"/>
+        &nbsp/&nbsp
+                 <input type="text" name="end" placeholder="Koniec zakresu" value="{{request.form.end}}"/>
+        &nbsp/&nbsp
+                    <input type="submit" value="Do IT!"/>
+                </form>
+                <font size="3" color="green">{{rezultat_historia_zakresy}}</font>
+            <br>
+        </td>
+
+
+    </tr>
+    <tr>
+        <td>
+<!-- historia[start:end+1] %} -->
+                {% for wiersz in historia  %}
+                    {% for elements in wiersz %}
+                     {{ elements }}<Br>
+                {% endfor %}
+                    {% endfor %}
+            <br>
+
+
+        </td>
+    </tr>
+</table>
+</body>
+</html>
+
