@@ -39,4 +39,91 @@ sprzedaz
 zx_71
 300
 40
+saldo
+1000
+load
+zakup
+mouse
+50
+12
+sprzedaz
+mouse
+60
+7
+zakup
+Gang of Four Design Patterns
+100
+5
+zakup
+Gang of Four Design Patterns
+100
+5
+zakup
+python dev book
+40
+2
+zakup
+python dev book
+40
+2
+zakup
+brand new pycharm
+50
+4
+zakup
+brand new pycharm
+50
+4
+zakup
+brand new pycharm
+60
+2
+zakup
+totally new keybord
+300
+3
+zakup
+Gang-of-Four-Design-Patterns
+300
+5
+sprzedaz
+Gang-of-Four-Design-Patterns
+600
+2
+sprzedaz
+mouse
+232
+3
+sprzedaz
+zx_71
+232
+1
+zakup
+zx_71
+232
+12
+zakup
+Gang of Four Design Patterns
+1
+12
+sprzedaz
+Gang of Four Design Patterns
+1
+1
+zakup
+Gang of Four Design Patterns
+1
+1
+zakup
+Just added '''' in line no 95
+1
+1
+zakup
+Just added '''' in line no 95
+1
+22
+sprzedaz
+Just added '''' in line no 95
+1
+1
 stop

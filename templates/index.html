@@ -63,7 +63,7 @@
 
         <td align="center" valign="top" width="35%">
         <font size="5" color="red" >Zakup</font>
-              <form method="post">
+              <form method="post" >
                   <input type="hidden" name="akcja" value="zakup">
                     <font size="3" ><b>Kupujemy:</b></font>
         <br><br>
@@ -91,10 +91,9 @@
                                     <div class="form-group column col-3 column col-6 col-xs-12">
                                         <select class="form-select" name="produkt">
                                         {% for produkt in magazyn %}
-                                            <option {% if request.form.produkt == produkt %} selected  {% endif %}
-                                            value = {{produkt}}
-
-                                            >{{produkt}}</option>
+                                            <option {% if request.form.produkt == produkt  %} selected {% endif %}
+                                            value = "{{produkt}}" >
+                                            {{produkt}}</option>
                                          {% endfor %}
                                         </select>
                                     </div>
