@@ -35,9 +35,9 @@
                  <input type="hidden" name="akcja" value="saldo">
         <font size="3" ><b>Zmiana:</b></font>
         &nbsp &nbsp
-                    <input type="text" name="wartosc" placeholder="Wartość" value="{{request.form.wartosc}}"/>
+                    <input required type="text" name="wartosc" placeholder="Wartość" value="{{request.form.wartosc}}"/>
         &nbsp/&nbsp
-                 <input type="text" name="komentarz" placeholder="Komentarz" value="{{request.form.komentarz}}"/>
+                 <input required type="text" name="komentarz" placeholder="Komentarz" value="{{request.form.komentarz}}"/>
         &nbsp/&nbsp
                     <input type="submit" value="Do IT!"/>
                 </form>
@@ -67,11 +67,11 @@
                   <input type="hidden" name="akcja" value="zakup">
                     <font size="3" ><b>Kupujemy:</b></font>
         <br><br>
-                         <input type="text" name="produkt" placeholder="Nazwa produktu" value="{{request.form.produkt}}"/>
+                         <input required type="text" name="produkt" placeholder="Nazwa produktu" value="{{request.form.produkt}}"/>
         <Br><br>
-                         <input type="text" name="cena" placeholder="Cena" value="{{request.form.cena}}"/>
+                         <input required type="text" name="cena" placeholder="Cena" value="{{request.form.cena}}"/>
       <Br><Br>
-                         <input type="text" name="ilosc" placeholder="Ilość" value="{{request.form.ilosc}}"/>
+                         <input required type="text" name="ilosc" placeholder="Ilość" value="{{request.form.ilosc}}"/>
          <Br><br>
 
                     <input type="submit" value="Do IT!"/>
@@ -99,10 +99,10 @@
                                     </div>
 <!-- rozwijany form end -->
 
-                         <input type="text" name="cena" placeholder="Cena" value="{{request.form.cena}}"/>
+                         <input required type="text" name="cena" placeholder="Cena" value="{{request.form.cena}}"/>
 
    <Br><Br>
-                         <input type="text" name="ilosc" placeholder="Ilość" value="{{request.form.ilosc}}"/>
+                         <input required type="text" name="ilosc" placeholder="Ilość" value="{{request.form.ilosc}}"/>
     <Br><Br>
                     <input type="submit" value="Do IT!"/>
                 </form>

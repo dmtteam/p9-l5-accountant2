@@ -31,9 +31,9 @@
                                      <input type="hidden" name="akcja" value="historia_zakresy">
         <font size="3" ><b>Podaj zakres:</b></font>
         &nbsp &nbsp
-                    <input type="text" name="start" placeholder="Początek zakresu" value="{{request.form.start}}"/>
+                    <input required type="text" name="start" placeholder="Początek zakresu"  value="{{request.form.start}}"/>
         &nbsp/&nbsp
-                 <input type="text" name="end" placeholder="Koniec zakresu" value="{{request.form.end}}"/>
+                 <input required type="text" name="end" placeholder="Koniec zakresu" value="{{request.form.end}}"/>
         &nbsp/&nbsp
                     <input type="submit" value="Do IT!"/>
                 </form>
