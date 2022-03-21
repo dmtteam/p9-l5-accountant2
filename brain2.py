@@ -8,21 +8,33 @@ class Magazyn:
         self.historia = []
 
     def saldo(self, wartosc, komentarz):
+        try:
+            wartosc=int(wartosc)
+        except ValueError:
+            return False, 'ERROR! Wprowadz poprawną kwote.'
         if wartosc == 0:
             print('Wpłać ciut więcej ;)')
             return False, 'Wpłać ciut więcej ;)'
         if self.stan_konta + wartosc < 0:
-            print('Zla kwota, brak mozliwosci wyplaty')
-            return False, 'Zla kwota, brak mozliwosci wyplaty'
+            print('Zla kwota, brak mozliwosci wyplaty.')
+            return False, 'Zla kwota, brak mozliwosci wyplaty.'
         if komentarz == "stop":
-            print("Transakcja anulowana")
-            return False, "Transakcja anulowana"
+            print("Transakcja anulowana.")
+            return False, "Transakcja anulowana."
         self.stan_konta += wartosc
         historia_saldo = ("saldo", wartosc, komentarz)
         self.historia.append(historia_saldo)
-        return True, f"Sukces! Zaksięgowano: {wartosc}"
+        return True, f"Sukces! Zaksiegowano: {wartosc}"
 
     def zakup(self, produkt, cena, ilosc):
+        try:
+            cena=int(cena)
+        except ValueError:
+            return False, 'ERROR! Wprowadz poprawna kwote.'
+        try:
+            ilosc=int(ilosc)
+        except ValueError:
+            return False, 'ERROR! Wprowadz poprawną ILOSC.'
         if cena <= 0:
             print('Zla cena!')
             return False, 'Zla cena!'
@@ -42,6 +54,14 @@ class Magazyn:
         return True, f"Sukces! Zakupiono: {produkt}"
 
     def sprzedaz(self, produkt, cena, ilosc):
+        try:
+            cena=int(cena)
+        except ValueError:
+            return False, 'ERROR! Wprowadz poprawna kwote.'
+        try:
+            ilosc=int(ilosc)
+        except ValueError:
+            return False, 'ERROR! Wprowadz poprawną ILOSC.'
         if produkt not in self.magazyn:
             print('Brak produktu w magazynie!')
             return False, 'Brak produktu w magazynie!'

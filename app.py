@@ -15,26 +15,27 @@ def show_index_page():
 
     if request.form.get("akcja"):
         if request.form["akcja"] == "saldo":
-            status, rezultat_saldo=magazyn.saldo(int(request.form["wartosc"]), request.form["komentarz"])
-        magazyn.zapisz("in.txt")
-
+            status, rezultat_saldo=magazyn.saldo(request.form["wartosc"], request.form["komentarz"])
+            if status:
+                magazyn.zapisz("in.txt")
     if request.form.get("akcja"):
         if request.form["akcja"] == "zakup":
             status, rezultat_zakup=magazyn.zakup(
                                                 str(request.form["produkt"]),
-                                                int(request.form["cena"]),
-                                                int(request.form["ilosc"])
+                                                request.form["cena"],
+                                                request.form["ilosc"]
                                                 )
-        magazyn.zapisz("in.txt")
-
+            if status:
+                magazyn.zapisz("in.txt")
     if request.form.get("akcja"):
         if request.form["akcja"] == "sprzedaz":
             status, rezultat_sprzedaz=magazyn.sprzedaz(
                                                 str(request.form["produkt"]),
-                                                int(request.form["cena"]),
-                                                int(request.form["ilosc"])
+                                                request.form["cena"],
+                                                request.form["ilosc"]
                                                 )
-        magazyn.zapisz("in.txt")
+            if status:
+                magazyn.zapisz("in.txt")
 
 # magazyn.wczytaj("in.txt")
 # print(magazyn.magazyn)
@@ -62,8 +63,9 @@ def show_history_page():
                            rezultat_historia_zakresy=rezultat_historia_zakresy
                            )
 
-
 app.run(debug=True)
+
+
 
 
 
